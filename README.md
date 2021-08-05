@@ -41,7 +41,7 @@ I also had some time and wanted to learn something new , that is , client-side J
 
 Stretegy table trades are automatically sent to the Websocket server if the script is enabled. The websocket server should recieve the data in the following JSON format.
 
-An entry would like like
+An entry would look like
 
 ```
 entry:{
