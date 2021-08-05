@@ -28,7 +28,7 @@ I also had some time and wanted to learn something new , that is , client-side J
 # How Does it Work?
 
 * The script simply listen for changes on the Strategy table using Javascript Observer pattern, and once new or updated trades are created it detects the change, and creates new records in JSON structure. The script maintains a memory store of the open trades and resets on closed trades.
-* It maintains an internal id and keeps the original trade numbers of the trade so it does not duplicate the dispatch of those trades. Do not depend on the trade numbers from TradingView because they actually change with updates to the table making them non-unique, so the `uid` created should be unique for the strategy execution. However, donot depend on this too, you need to employ some mechansim in your trading bot to ensure the trades are not duplicates.
+* It maintains an internal id and keeps the original trade numbers of the trade so it does not duplicate the dispatch of those trades. Do not depend on the trade numbers from TradingView because they actually change with updates to the table making them non-unique, so the `uid` created should be unique for the strategy execution. However, donot depend on this too, you need to employ some mechansim in your trading bot to ensure the trades are not duplicates. Note when the notifications is enabled, the script attempts to load the general information of the strategy and reads the attributes such as `initial capital`, `symbol`, etc.
 
 # How to Use it ?
 
@@ -44,6 +44,15 @@ Stretegy table trades are automatically sent to the Websocket server if the scri
 An entry would look like
 
 ```
+strategy:  {
+    title:  <title of the strategy>
+    symbol: <market symbol>
+    initCapital: <configured initial capital>
+    orderSize: <configured order size>
+    orderSizeType: <Contracts, USD or Equity>
+    pyramiding: <configured pyramiding attribute>
+    gPrefix: <prefix used as an identifer for this strategy, it is a hash of the title of the strategy in a hex string>
+},
 entry:{
   uid: <id of the entry trade>
   symbol: <market symbol>
@@ -58,11 +67,7 @@ entry:{
   date: <datetime of the entry>
   dateTimeStamp: <numberical timestamp of the entry trade>
   price: <entry price>
-  strategy:  {
-    title:  <title of the strategy>
-    symbol: <market symbol>
-    gPrefix: <prefix used as an identifer for this strategy, it is a hash of the title of the strategy in a hex string>
-  }
+
 }
 ```
 
@@ -82,7 +87,11 @@ exit: {
 If a trade is edited by TradingView, the data is updated and pushed to the websocket server. Your trading bot should keep the open trade id, so if a change is detected it can update the same trade.
 
 
+# Limitations
+
+You got to enter the 
+
 # Thanks
 
-if you using the script or like it, at least hit the star button or leave a comment. It took many hours to create. 
-Remember this is strictly for educational purposes !
+If you using the script or like it, do me a favor and at least hit the star button or leave a comment. It took so many hours to create. 
+Remember this is strictly for educational purposes , dont use it with real trades!
