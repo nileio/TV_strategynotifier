@@ -35,7 +35,7 @@ I also had some time and wanted to learn something new , that is , client-side J
 
 * Add your websocket server information in the script and save it, 
 * open any chart in TradingView and add a Strategy, configure the strategy and ensure it runs for forward testing too. 
-* Make sure the script is loaded. It will be indicated by your extension if the script is loaded in the page or not. You can also determine if the script is loaded if you check the Strategy tab in TradingView, a button show show up which let you enable push notifications to the configured websocket server. Note the script is configured to be automatically loaded for this website pattern https://www.tradingview.com/chart* , modify it as needed.
+* Make sure the script is loaded. It will be indicated by your extension if the script is loaded in the page or not. You can also determine if the script is loaded if you check the Strategy tab in TradingView, a button should show up which lets you enable the notifications to the configured websocket server. Note the script is configured to be automatically loaded for this website pattern https://www.tradingview.com/chart* , modify it as needed.
 * Enable the notifications by clicking the button and your configured websocket server should now start recieving the data as they arrive.
 
 # Output
@@ -76,7 +76,7 @@ An exit trade would look like
 ```
 exit: {
   uid: <id of the exit trade>
-  entryuid: <id of the corresponding entry trade for this exit>
+  entryuid: <id of the corresponding entry trade>
   symbol: <market symbol>
   gPrefix: <strategy prefix>
   tradeno: <trade number>
