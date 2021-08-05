@@ -7,6 +7,7 @@ The script scraps the Strategy data in real-time and pushes data to a user defin
 # Disclaimer
 
 I am sharing this script strictly for educational and demo purposes only. It is in no way to be used for commercial purposes and it is not intended for use by individuals to bypass the Free Version limitations. TradingView is a great piece of software, if you use it, Pay for it.
+<I dont know if the script still works or not I haven't tested it for a while! :)>
 
 # Why did I create this?
 
@@ -34,8 +35,8 @@ I also had some time and wanted to learn something new , that is , client-side J
 
 * Add your websocket server information in the script and save it, 
 * open any chart in TradingView and add a Strategy, configure the strategy and ensure it runs for forward testing too. 
-* Make sure the script is loaded. It will be indicated by your extension if the script is loaded in the page or not. You can also determine if the script is loaded if you check the Strategy tab in TradingView, a button show show up which let you enable push notifications to the configured websocket server.
-* Your websocket server should now start recieving the data as they arrive.
+* Make sure the script is loaded. It will be indicated by your extension if the script is loaded in the page or not. You can also determine if the script is loaded if you check the Strategy tab in TradingView, a button show show up which let you enable push notifications to the configured websocket server. Note the script is configured to be automatically loaded for this website pattern https://www.tradingview.com/chart* , modify it as needed.
+* Enable the notifications by clicking the button and your configured websocket server should now start recieving the data as they arrive.
 
 # Output
 
@@ -94,4 +95,4 @@ You got to enter the
 # Thanks
 
 If you using the script or like it, do me a favor and at least hit the star button or leave a comment. It took so many hours to create. 
-Remember this is strictly for educational purposes , dont use it with real trades!
+Remember this is strictly for educational purposes , dont use it with real trades! Enjoy
