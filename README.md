@@ -90,7 +90,8 @@ If a trade is edited by TradingView, the data is updated and pushed to the webso
 
 # Limitations
 
-You got to enter the 
+* You got to input the market symbol in the script so that would be returned in the output. Ofcourse this could be automatically read from the strategy attributes screen if someone wants to code that bit. 
+* If you are on free plan, you cant have more than 3000 records in the Strategy table.
 
 # Thanks
 
