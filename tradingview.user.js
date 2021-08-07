@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        TradingView Strategy Trades Observer for tradingview.com
+// @name        TradingView strategy websocket notifier
 // @namespace   Violentmonkey Scripts
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
 // @match       https://www.tradingview.com/chart*
