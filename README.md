@@ -6,7 +6,7 @@ The script scraps the Strategy data in real-time and pushes data to a user defin
 
 # Disclaimer
 
-I am sharing this script strictly for educational and demo purposes only. It is in no way to be used for commercial purposes and it is not intended for use by individuals to bypass the Free Version limitations. TradingView is a great piece of software, if you use it, Pay for it.
+I am sharing this script strictly for educational and demo purposes only. It is in no way to be used for commercial purposes without making the modifications available for public use and it is not intended for use by individuals to bypass the Free Version limitations. TradingView is a great piece of software, if you use it, Pay for it.
 <I dont know if the script still works or not I haven't tested it for a while! :)>
 
 # Why did I create this?
