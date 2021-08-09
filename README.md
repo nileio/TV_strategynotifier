@@ -28,7 +28,7 @@ I also had some time and wanted to learn something new , that is , client-side J
 
 # How Does it Work?
 
-* The script simply listen for changes on the Strategy table using Javascript Observer pattern, and once new or updated trades are created it detects the change, and creates new records in JSON structure. The script maintains a memory store of the open trades and resets on closed trades.
+* The script simply listen for changes on the Strategy table using Javascript Observer pattern, and once new or updated trades are created it detects the change, and creates new records in JSON structure. The script maintains a memory store of the open trades and resets on closed trades. Becuase this is a client-side script , it assumes that you simply leave the browser window open! TradingView does not have a timeout so as long as the Browser window/tab is open the script should be running in the background. Check the Browser console for details.
 * It maintains an internal id and keeps the original trade numbers of the trade so it does not duplicate the dispatch of those trades. Do not depend on the trade numbers from TradingView because they actually change with updates to the table making them non-unique, so the `uid` created should be unique for the strategy execution. However, donot depend on this too, you need to employ some mechansim in your trading bot to ensure the trades are not duplicates. Note when the notifications is enabled, the script attempts to load the general information of the strategy and reads the attributes such as `initial capital`, `symbol`, etc.
 
 # How to Use it ?
